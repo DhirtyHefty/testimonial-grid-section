@@ -77,6 +77,12 @@ body{
     margin-bottom: 1rem;
 }
 
+.avatar-section{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .profile h3{
     font-size: 1rem;
 }
