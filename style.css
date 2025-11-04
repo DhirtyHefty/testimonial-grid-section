@@ -39,98 +39,104 @@ body{
     min-height: 100vh;
 }
 
-.main-section{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
 .containers{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "daniel daniel jonathan kira"
+        " jeanette patrick patrick kira";
     gap: 1.5rem;
+    width: 90%;
     max-width: 1110px;
     
 }
 
+
+
 .cards{
-    display: block;
+    background-color: var(--White);
     border-radius: 10px;
     padding: 20px; 
     width: 100%;
-    height: 90%;
-    border: 2px solid red;
+    height: auto;
+    box-shadow: 0 10px  20px rgba(0, 0, 0, 0.139);
+  text-align: left;
 }
 
-.cards img{
+.profile img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 2px solid var(--White);
 }
 
-.avatar-section{
+.profile{
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile h3{
+    font-size: 1rem;
+}
+
+.profile p{
+    font-size: 0.8rem;
+}
+
+.quote{
+    font-weight: bolder;
+    margin-bottom: 1.5rem;
 }
 
 
-
-blockquote{
-    font-size: 1.2rem;
-    line-height: 1.3;
-}
-
-.daniel-sec{
+.daniel{
     background-color: var(--Purple500);
+    color: var(--Grey100);
+    grid-area: daniel;
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 30px;
+    background-size: 80px;
+
 }
 
-.jonathan-sec{
+.jonathan{
     background-color: var(--Grey500);
+    grid-area: jonathan;
+    color:var(--Grey100) ;
 }
 
-.jeanette-sec{
+.jeanette{
     background-color: var(--White);
+    grid-area: jeanette;
+    color: var(--Grey400);
 }
 
-.patrick-sec{
+.patrick{
     background-color: var(--Darkblue);
+    grid-area: patrick;
+    color: var(--Grey200);
 }
 
-.kira-sec{
+.kira{
     background-color: var(--White);
+    grid-area: kira;
+    color: var(--Grey400);
 }
 
-.daniel-sec{
-    grid-column: 1 / span 2;
-}
 
-.jonathan-sec{
-    grid-column: 3 / 4;
-}
-
-.jeanette-sec{
-    grid-column: 1 / 2;
-}
-
-.patrick-sec{
-    grid-column: 2 / span 2;
-}
-
-.kira-sec{
-    grid-column: 4 /5;
-    grid-row: 1 /2;
-}
 
 @media (max-width: 768px) {
     .containers{
-        display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        justify-items: center;
+        grid-template-areas: 
+            "daniel"
+            "jonathan"
+            "jeanette"
+            "patrick"
+            "kira";
     }
 
 }
